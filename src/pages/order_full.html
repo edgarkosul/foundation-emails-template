@@ -1,0 +1,114 @@
+<spacer size="8"></spacer>
+<container>
+  <row>
+    <columns bgcolor="#f3f3f3">
+        <p class="text-center"><small>Посмотреть все письма в браузере можно <a href="https://www.siteko.net/clientarea.php?action=emails">тут</a></small></p>
+    </columns>
+  </row>
+</container>
+<container class="radius">
+  <spacer size="12"></spacer>
+  <row class="header">
+    <columns large="4" small="12">
+      <img class="float-left small-float-center" src="http://www.siteko.net/images/logo_mail.png" alt="Хостинг Siteko"><p></p>
+    </columns>
+    <columns large="5" small="12" valign="bottom" class="large-offset-1">
+     <center> <menu>
+        <item href="https://www.siteko.net/">Главная</item>
+        <item href="https://www.siteko.net/clientarea.php">Кабинет</item>
+        <item href="https://www.siteko.net/submitticket.php">Поддержка</item>
+      </menu></center>
+    </columns>   
+  </row>
+  <spacer size="12"></spacer>
+  <row>
+    <columns bgcolor="#3399cc">
+  </row>
+  <!-- Header end -->
+  <row bgcolor="fefefe">
+    <columns large="12" small="12">
+    <spacer size="16"></spacer>
+      <p><em>Здравствуйте, {$client_name}!</em></p>
+      <h5><strong>Спасибо за Ваш заказ</strong></h5>
+      <p>Пожалуйста, полностью прочитайте это письмо и сохраните его. Для Вас создан хостинговый аккаунт, а это письмо содержит всю необходимую информацию для его использования.</p>
+      <h6><strong>Вы заказали следующую услугу:</strong></h6>
+        <callout class="primary">
+          <row>
+            <columns large="6">
+              <p><strong>Тарифный план</strong><br/>
+              {$service_product_name}</p>
+              <p><strong>Email адрес</strong><br/>
+              {$client_email}</p>
+              <p><strong>ID заказа</strong><br/>
+              {$service_order_id}</p>
+            </columns>
+            <columns large="6">
+              <p><strong>Доменное имя</strong><br/>
+              {$service_domain}</p>
+              <p><strong>Метод оплаты</strong><br/>
+              {$service_payment_method}<br/></p>
+            </columns>
+          </row>
+        </callout>
+      <p>Страница управления услугой доступна по <strong> <a title="Управление услугой" href="https://www.siteko.net/clientarea.php?action=productdetails&id={$service_id}">ссылке</a></strong>. С этой страницы вам доступен прямой переход в разделы панели ISPmanager для управления файлами, создания сайтов, баз данных, почтовых ящиков и пр.</p>
+      <h6><strong>Авторизационные данные от панели ISPmanager:</strong></h6>
+        <callout>      
+          <p><strong>Адрес:</strong> <a title="https://isp.siteko.ru" href="https://isp.siteko.ru"> https://isp.siteko.ru</a></p>
+          <p><strong>Логин:</strong> {$service_username}</p>
+          <p><strong>Пароль:</strong> {$service_password}</p>
+        </callout>
+      <p>Если ваш домен был зарегистрирован ранее, необходимо сменить у его регистратора DNS серверы на указанные ниже.</p>
+      <p><strong>Неймсервер 1:</strong> ns1.siteko.net</p>
+      <p><strong>Неймсервер 2:</strong> ns2.siteko.net</p>
+      <p>Если при оформлении вы, в том числе, заказали доменное имя, пожалуйста, учтите, что оно не будет сразу же открываться в интернете. Процесс распространения (propagation) информации о нем по сети может занять до 48 часов. До завершения данного процесса, сайт и почта не будут работать. Для просмотра загруженных сайтов в браузере до окончания этого процесса вы можете использовать технический домен:<br/> <strong><em><a href="http://{$service_username}.myeko.ru">http://{$service_username}.myeko.ru</a></em></strong></p>
+      <p><strong>Загрузка вашего сайта:</strong></p>
+        <callout>
+          <p><strong>FTP имя хоста:</strong> {$service_username}.myeko.ru</p>
+          <p><strong>Логин:</strong> {$service_username}</p>
+          <p><strong>Пароль:</strong> {$service_password}</p>
+        </callout>
+          <p>Вы можете воспользоваться стандартным проводником операционной системы Windows как FTP клиентом для закачки файлов на хостинг.</p>
+          <p>Для этого достаточно скопировать в адресную строку проводника:</p>
+          <p><a href="ftp://{$service_username}:{$service_password}@{$service_username}.myeko.ru/www">ftp://{$service_username}:{$service_password}@{$service_username}.myeko.ru/www</a></p>
+          <p><strong>Создание базы данный MySQL и доступ к PhpMyAdmin</strong></p>
+          <p>База данных и  её пользователь создаётся в разделе "Базы данных" панели ISPmanager.</p>
+          <p><strong>Сервер баз данных:</strong> localhost</p>
+          <p>При выборе альтернативной версий сервера баз данных необходимо использовать адрес сервера 0.0.0.0 и порт, указанный в панели ISPmanager после создания новой базы.</p>
+          <p>Обратите внимание что не все CMS понимают нестандартный порт базы данных при указании его после двоеточия: 0.0.0.0:3315 Для указания порта в конфигурационном файле вашей CMS может быть отдельная строка.</p>
+          <p><strong>Настройка Email:</strong></p>
+          <p>Для добавления почтовых аккаунтов в вашей email программе используйте следующие настройки соединения:</p>
+          <p><strong>POP3 адрес хоста:</strong> {$service_domain}</p>
+          <p><strong>SMTP адрес хоста:</strong> {$service_domain}</p>
+          <p><strong>Логин:</strong> email адрес аккаунта, который вы настраиваете (включая @ и имя домена)</p>
+          <p><strong>Пароль:</strong> указанный вами в панели управления ISPmananger при создании нового почтового ящика.</p>
+          <p><em>Благодарим за выбор наших услуг.</em></p>
+    </columns>
+  </row>
+   <!-- Footer start -->
+  <row>
+    <columns bgcolor="#3399cc">
+  </row>
+  <row>
+    <columns large="4" small="12" valign="middle">
+      <p class="footerwhite text-center">
+        <small><br>Санкт-Петербург</small>
+      </p>
+    </columns>
+    <columns  large="4" small="12" valign="bottom">
+      <p class="footerwhite text-center">
+        <small><br>tel: +7(812)405-00-15 <br>Email: support@siteko.net
+        </small>
+      </p>
+    </columns>
+    <columns large="4" small="12" valign="middle">
+    <img class="float-right small-float-center" src="http://www.siteko.net/images/logo_mail30.png" alt="Хостинг Siteko">
+    </columns>
+  </row>
+</container>
+<container>
+  <row>
+    <columns bgcolor="#f3f3f3">
+      <p  class="text-center"><small>Это письмо создано автоматически и отвечать на него не нужно. Для связи с поддержкой используйте адрес <a href="mailto:support@siteko.net">support@siteko.net</a> или откройте запрос-тикет  <a href="https://www.siteko.net/submitticket.php" title=Поддержка Siteko.net>в поддержке</a> на сайте</small></p>
+    </columns>
+  </row>
+</container>

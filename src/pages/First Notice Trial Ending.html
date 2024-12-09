@@ -1,0 +1,150 @@
+<spacer size="8"></spacer>
+<container>
+  <row>
+    <columns bgcolor="#f3f3f3">
+        <p class="text-center"><small>Посмотреть все письма в браузере можно <a href="https://www.siteko.net/clientarea.php?action=emails">тут</a></small></p>
+    </columns>
+  </row>
+</container>
+<container class="radius">
+  <spacer size="12"></spacer>
+  <row class="header">
+    <columns large="4" small="12">
+      <img class="float-left small-float-center" src="http://www.siteko.net/images/logo_mail.png" alt="Хостинг Siteko"><p></p>
+    </columns>
+    <columns large="5" small="12" valign="bottom" class="large-offset-1">
+     <center> <menu>
+        <item href="https://www.siteko.net/">Главная</item>
+        <item href="https://www.siteko.net/clientarea.php">Кабинет</item>
+        <item href="https://www.siteko.net/submitticket.php">Поддержка</item>
+      </menu></center>
+    </columns>   
+  </row>
+  <spacer size="12"></spacer>
+  <row>
+    <columns bgcolor="#3399cc">
+  </row>
+  <!-- Header end -->
+  <row bgcolor="fefefe" class="bgwhite">
+    <columns large="12" small="12">
+    <spacer size="16"></spacer>
+      <p><em>Здравствуйте, {$client_name}!</em></p>
+      <p>Напоминаем Вам, что бесплатный период использования хостинга подходит к концу. Осталось ТРИ дня.</p>
+              <callout class="primary">
+          <row>
+            <columns large="6" small="12">
+              <p><strong>Дата регистрации: </strong><br/>
+               {$service_reg_date}</p>
+            </columns>
+            <columns large="6" small="12">
+              <p><strong>Заказанная услуга</strong><br/>
+              {$service_product_name}</p>
+            </columns>
+            </row>
+        </callout>
+      <p>Также напоминаем Вам доступы к управлению хостингом - <strong> <a title="Управление услугой" href="https://www.siteko.net/clientarea.php?action=productdetails&id={$service_id}">Страница управления</a></strong>. С этой страницы вам доступен прямой переход в разделы панели ISPmanager для управления файлами, создания сайтов, баз данных, почтовых ящиков и пр.</p>
+      <h6><strong>Авторизационные данные от панели ISPmanager:</strong></h6>
+        <callout>      
+          <p><strong>Адрес:</strong> <a title="https://isp.siteko.ru" href="https://isp.siteko.ru"> https://isp.siteko.ru</a></p>
+          <p><strong>Логин:</strong> {$service_username}</p>
+          <p><strong>Пароль:</strong> {$service_password}</p>
+        </callout>
+      <p>Надеемся, что Вы остались удовлетворены качеством наших услуг. Если вы еще не успели разместить сайт на хостинге, то сейчас самое время это сделать.</p>
+    </columns>
+  </row>
+  <row bgcolor="fefefe" class="bgwhite">
+    <columns large="12" small="12">        
+      <h6 class="text-center"><strong>Продлите хостинг сегодня.</strong></h6>
+    </columns>
+  </row>
+  <row bgcolor="fefefe" class="bgwhite">
+    <columns large="4">
+      <h5 class="text-center">Во-первых!</h5>   
+      <center>
+        <img src="http://www.siteko.net/images/mail_eko1.png">
+      </center>
+      <spacer size="12"></spacer>
+      <p class="text-center">Это не дорого. Всего 75 руб. за тарифный план Старт.</p>
+    </columns>
+    <columns large="4">
+      <h5 class="text-center">Во-вторых!</h5>
+      <center>
+        <img src="http://www.siteko.net/images/mail_eko2.png">
+      </center>
+      <spacer size="12"></spacer>      
+      <p class="text-center">Это быстро. Практически любые способы оплаты.</p>
+    </columns>
+    <columns large="4">
+      <h5 class="text-center">В-третих!</h5>      
+      <center>
+        <img src="http://www.siteko.net/images/mail_eko3.png">
+      </center>
+      <spacer size="12"></spacer>
+      <p class="text-center">Мы поможем Вам разместить свой сайт у нас.</p>
+    </columns>
+  </row >
+  <row bgcolor="fefefe" class="bgwhite">
+    <columns large="12">
+      <p>Обратитесь в <a href="https://www.siteko.net/submitticket.php" title="Поддержка хостинга">поддержку</a> и мы с удовольствием поможем Вам.</p>  
+        <callout class="primary">
+          <row>
+            <columns large="12">
+              <p>Бесплатно перенесм Ваш сайт с другого хостинга.</p>
+              <p>Поможем зарегистрировать доменное имя.</p>
+              <p>Поможем разместить сайт на этом домене.</p>
+              <p>Установим любую популярную систему управления сайтом.</p>
+              <p>Поможем выбрать шаблон или установим понравившийся Вам шаблон.</p>
+              <p class="text-center"><strong>И все это бесплатно.</strong></p>
+            </columns>
+          </row>
+        </callout>
+  </columns>
+  </row>  
+
+
+  <row bgcolor="fefefe" class="bgwhite">
+
+    <columns>
+
+      <h3 class="text-center">Что Вы еще ждете? Оплатите хостинг сегодня!</h3>
+      
+      <spacer size="12"></spacer>
+
+      <button class="large expand" href="https://www.siteko.net/upgrade.php?type=package&id={$service_id}">Сменить тариф</button>
+    </columns>
+  </row>
+
+    <row bgcolor="fefefe" class="bgwhite">
+      <columns large="12" small="12">
+      <p>Для продления услуги необходимо перейти на страницу Смены тарифа и выбрать нужный вам тариф из предложенных.<br>После оплаты заказа ваш текущий тестовый аккаунт со всеми файлами и настройками панели управления хостингом автоматически перейдет на новый тариф с выбранным вами периодом оплаты.</p>
+          <p><em>Благодарим за выбор наших услуг.</em></p>
+    </columns>
+  </row>
+   <!-- Footer start -->
+  <row>
+    <columns bgcolor="#3399cc">
+  </row>
+  <row>
+    <columns large="4" small="12" valign="middle">
+      <p class="footerwhite text-center">
+        <small><br>Санкт-Петербург</small>
+      </p>
+    </columns>
+    <columns  large="4" small="12" valign="bottom">
+      <p class="footerwhite text-center">
+        <small><br>tel: +7(812)405-00-15 <br>Email: support@siteko.net
+        </small>
+      </p>
+    </columns>
+    <columns large="4" small="12" valign="middle">
+    <img class="float-right small-float-center" src="http://www.siteko.net/images/logo_mail30.png" alt="Хостинг Siteko">
+    </columns>
+  </row>
+</container>
+<container>
+  <row>
+    <columns bgcolor="#f3f3f3">
+      <p  class="text-center"><small>Это письмо создано автоматически и отвечать на него не нужно. Для связи с поддержкой используйте адрес <a href="mailto:support@siteko.net">support@siteko.net</a> или откройте запрос-тикет  <a href="https://www.siteko.net/submitticket.php" title=Поддержка Siteko.net>в поддержке</a> на сайте</small></p>
+    </columns>
+  </row>
+</container>

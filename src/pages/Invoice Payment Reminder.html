@@ -1,0 +1,76 @@
+---
+subject: Добро пожаловать на хостинг Siteko
+---
+<spacer size="10"></spacer>
+<container>
+  <row>
+    <columns bgcolor="#f3f3f3">
+        <p><small>Посмотреть все письма в браузере можно <a href="https://www.siteko.net/clientarea.php?action=emails">тут</a></small></p>
+    </columns>
+  </row>
+</container>
+<container class="radius">
+  <spacer size="16"></spacer>
+  <row class="header text-center">
+    <columns large="4">
+      <img src="http://www.siteko.net/images/logo_mail.png" alt="Хостинг Siteko">     
+    </columns>
+    <columns large="8" class="large-offset-1">
+      <p><strong><br/>Здравствуйте, {$client_name}!</strong></p>
+    </columns>
+  </row>
+  <!-- Синяя полоса -->
+  <row>
+    <columns bgcolor="#3399cc">
+  </row>
+  <!-- Конец синей полосы -->
+  <row bgcolor="fefefe">
+    <columns large="12" small="12">
+    <spacer size="16"></spacer>
+      <h6><strong>Напоминаем Вам о неоплаченном счете  {$invoice_num}</strong></h6>
+      <p>Пожалуйста, оплатите его до {$invoice_date_due}</p>
+      <h6><strong>Счет выписан за услугу:</strong></h6>
+      <callout class="primary">
+        <row>
+          <columns large="12">
+            <p>{$invoice_html_contents}</p>
+          </columns>
+        </row>
+      </callout>
+      <p>Вы можете перейти в панель клиента для просмотра и оплаты счета по адресу: {$invoice_link}</p>
+      <p><em>Благодарим за выбор наших услуг.</em></p>
+    </columns>
+  </row>
+  <!-- Синяя полоса -->
+  <row>
+    <columns bgcolor="#3399cc">
+  </row>
+  <!-- Конец синей полосы -->
+  <spacer size="16"></spacer>
+
+  <row class="text-center">
+
+    <columns large="6" >
+      <img src="http://www.siteko.net/images/logo_mail.png" height="30px" alt="Хостинг Siteko">
+    </columns>
+    <columns  large="3">
+      <p class="footerwhite">
+        <small>tel: +7(812)405-00-15<br/>
+        support@siteko.net</small>
+      </p>
+    </columns>
+    <columns large="3" >
+      <p class="footerwhite">
+        <small>Санкт-Петербург<br/>
+        Литовкая, 10</small>
+      </p>
+    </columns>
+  </row>
+</container>
+<container>
+  <row>
+    <columns bgcolor="#f3f3f3">
+      <p><small>Это письмо создано автоматически и отвечать на него не нужно. Для связи с поддержкой используйте адрес <a href="mailto:support@siteko.net">support@siteko.net</a> или откройте запрос-тикет  <a href="https://www.siteko.net/submitticket.php" title=Поддержка Siteko.net>в поддержке</a> на сайте</small></p>
+    </columns>
+  </row>
+</container>
